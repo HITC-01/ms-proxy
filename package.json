@@ -1,0 +1,35 @@
+{
+  "name": "soundcloud",
+  "version": "1.0.0",
+  "description": "Proxy app for bringing all features together",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "nodemon ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HITC-01/ms-proxy.git"
+  },
+  "author": "Head in the Clouds",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HITC-01/ms-proxy/issues"
+  },
+  "homepage": "https://github.com/HITC-01/ms-proxy#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.5.0",
+    "jest": "^23.6.0",
+    "morgan": "^1.9.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "webpack": "^4.25.1"
+  }
+}

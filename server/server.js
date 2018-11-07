@@ -8,6 +8,8 @@ const proxy = require('express-http-proxy');
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', proxy('http://localhost:3004/player/sc'));
+app.use('/songs/:songId', proxy('http://localhost:3001/songs/:songId'));
+app.use('/', proxy('http://localhost:3002'));
 app.use('/', proxy('http://localhost:3003/song/:id'));
 
 

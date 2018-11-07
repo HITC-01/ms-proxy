@@ -1,0 +1,7 @@
+# Ignore all modules
+/node_modules
+/BP-related_tracks
+/GK-user
+/ms-comment
+/lf-player
+/.vscode
