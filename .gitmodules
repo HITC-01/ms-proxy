@@ -1,0 +1,3 @@
+[submodule "lf-player"]
+	path = lf-player
+	url = https://github.com/HITC-01/lf-player.git
