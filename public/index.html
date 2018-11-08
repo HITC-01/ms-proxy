@@ -7,27 +7,35 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
   </head>
   <body>
+    <div id="nav"></div>
     <div id="player"></div>
+    <div id="user"></div>
     <div id="comment"></div>
-    <div id="app"></div>
+    <div id="viewcomments"></div>
     <div id="SCRelated"></div>
-    <script src="/lib/react.development.js"></script>
-    <script src="/lib/react-dom.development.js"></script>
+
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://s3-us-west-1.amazonaws.com/head-in-the-clouds-player/player-bundle.min.js"></script>
-    <script src="https://s3-us-west-1.amazonaws.com/fec-1/bundle.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/fec-1/sc-user.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/head-in-the-clouds-player/dist/sc-player.js"></script>
     <script src="https://s3-us-west-1.amazonaws.com/head-in-the-clouds-related/relatedTrack_bundle.js"></script>
-    <script src="https://s3-us-west-1.amazonaws.com/fec-comments/bundle/app.js"></script>
+    <script src="https://s3-us-west-1.amazonaws.com/fec-comments/bundle/sc-comment.js"></script>
+  
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
     <script>
       ReactDOM.render(
-        React.createElement(Player, null),
+        React.createElement(Nav, null),
+        document.getElementById('nav')
+      );
+      ReactDOM.render(
+        React.createElement(Player),
         document.getElementById('player')
       );
       ReactDOM.render(
-        React.createElement(Page, null),
-        document.getElementById('app')
+        React.createElement(User, null),
+        document.getElementById('user')
       );
       ReactDOM.render(
         React.createElement(SCRelated, null),
@@ -36,6 +44,10 @@
       ReactDOM.render(
         React.createElement(Comment, null),
         document.getElementById('comment')
+      );
+      ReactDOM.render(
+        React.createElement(ViewComments, null),
+        document.getElementById('viewcomments')
       );
     </script>
   </body>
