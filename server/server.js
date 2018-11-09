@@ -9,12 +9,12 @@ app.use(morgan('dev'));
 
 app.use('/songs/:songId', express.static(path.join(__dirname, '../public')));
 
-app.use('/comments/*', 
-    proxy('http://localhost:3003/', {
-      proxyReqPathResolver: (req) => {
-        console.log('Redirecting to 3003');
-        return req.originalUrl;
-      },
+app.use('/user/*', 
+    proxy('http://localhost:3001/', {
+        proxyReqPathResolver: (req) => {
+          console.log('Redirecting to 3001');
+          return req.originalUrl;
+        }
     }
 ));
 
@@ -27,12 +27,12 @@ app.use('/player/*',
     }
 ));
 
-app.use('/user/*', 
-    proxy('http://localhost:3001/', {
-        proxyReqPathResolver: (req) => {
-          console.log('Redirecting to 3001');
-          return req.originalUrl;
-        }
+app.use('/comments/*', 
+    proxy('http://localhost:3003/', {
+      proxyReqPathResolver: (req) => {
+        console.log('Redirecting to 3003');
+        return req.originalUrl;
+      },
     }
 ));
 
