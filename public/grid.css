@@ -2,13 +2,9 @@ body {
     margin: 0px;
 }
 
-.wrapper {   
-}
-
 .navBar {
     display: block;
     width: 100%;
-    
 }
 
 .player {
@@ -51,17 +47,6 @@ body {
 .comment__comBorder___1KgIW {
     width: 68% !important;
 }
-/* .border {
-    background-color: #ccc;
-    grid-column: 1/2;
-    grid-row: 2/6;
-}
-
-.border2 {
-    background-color: #ccc;
-    grid-column: 7/8;
-    grid-row: 2/6;
-} */
 
 .viewcomments__comCommentContainer___3HpRY{
     max-width: initial !important;
@@ -91,7 +76,8 @@ body {
 .nav__navCenter__1ZBKB .fa-search{
     margin-left: 20px !important;
 }
-.grid{
+
+.grid {
     display: grid;
     grid-template-columns: 70% 30%;
     width: 960px;
