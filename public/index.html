@@ -5,14 +5,22 @@
     <title>SoundCloud Song Page</title>
     <link href="https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14b.ico" rel="icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="grid.css">
   </head>
   <body>
-    <div id="nav"></div>
-    <div id="player"></div>
-    <div id="user"></div>
-    <div id="comment"></div>
-    <div id="viewcomments"></div>
-    <div id="SCRelated"></div>
+    <div class="wrapper">
+      <div class="border"></div>
+      <div id="nav" class="navBar"></div>
+      <div id="player" class="player"></div>
+      <div class="grid">
+          <div id="comment" class="comment"></div>
+          <div id="user" class="user"></div>
+          <div id="SCRelated" class="screlated"></div>
+          <div id="viewcomments" class="viewcomments"></div>
+          
+      </div>
+      <!-- <div class="border2"></div> -->
+  </div>
 
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
