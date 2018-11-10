@@ -5,12 +5,17 @@ const app = express();
 const port = process.env.PORT || 3000;
 const proxy = require('express-http-proxy');
 
+const serverOne = 'http://ec2-54-183-128-92.us-west-1.compute.amazonaws.com/';
+const serverTwo = 'http://ec2-54-215-217-201.us-west-1.compute.amazonaws.com/';
+const serverThree = 'http://ec2-54-185-4-172.us-west-2.compute.amazonaws.com/';
+const serverFour = 'http://ec2-18-222-200-123.us-east-2.compute.amazonaws.com/';
+
 app.use(morgan('dev'));
 
 app.use('/songs/:songId', express.static(path.join(__dirname, '../public')));
 
 app.use('/user/*', 
-    proxy('http://localhost:3001/', {
+    proxy(serverOne, {
         proxyReqPathResolver: (req) => {
           console.log('Redirecting to 3001');
           return req.originalUrl;
@@ -19,7 +24,7 @@ app.use('/user/*',
 ));
 
 app.use('/player/*', 
-    proxy('http://localhost:3004/', {
+    proxy(serverFour, {
         proxyReqPathResolver: (req) => {
           console.log('Redirecting to 3004');  
           return req.originalUrl;
@@ -28,7 +33,7 @@ app.use('/player/*',
 ));
 
 app.use('/comments/*', 
-    proxy('http://localhost:3003/', {
+    proxy(serverThree, {
       proxyReqPathResolver: (req) => {
         console.log('Redirecting to 3003');
         return req.originalUrl;
@@ -37,7 +42,7 @@ app.use('/comments/*',
 ));
 
 app.use('/related/*', 
-    proxy('http://localhost:3002/', {
+    proxy(serverTwo, {
         proxyReqPathResolver: (req) =>  {
             console.log('Redirecting to 3002');
             return req.originalUrl;
