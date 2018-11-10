@@ -44,6 +44,7 @@ body {
 .viewcomments__comBottomBorder___1wJ0D {
     width: 100% !important;
 }
+
 .comment__comBorder___1KgIW {
     width: 68% !important;
 }
@@ -51,6 +52,7 @@ body {
 .viewcomments__comCommentContainer___3HpRY{
     max-width: initial !important;
 }
+
 .comment__comTextbox___JKAUn{
     padding-right: 0 !important;
 }
@@ -58,21 +60,27 @@ body {
 .comment__textBoxCreateComment___BZA4y{
     width: 63% !important;
 }
+
 .comment__streamText___3ETOJ{
     margin-left: 0 !important;
 }
+
 .comment__ulmain___B2zlC{
     padding-left: 0 !important;
 }
+
 .viewcomments__comTotalCommentsCount___tgbHk{
     width: 100% !important;
 }
+
 .nav__navRight__3tGlf{
     justify-content: flex-end !important;
 }
+
 .nav__navSearch__udBpF{
     width: 300px !important;
 }
+
 .nav__navCenter__1ZBKB .fa-search{
     margin-left: 20px !important;
 }
